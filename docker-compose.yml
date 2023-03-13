@@ -1,10 +1,13 @@
 version: '3.9'
 
 services:
-  mondodb:
+  mongodb:
     image: mongo:5.0
     ports:
       - 27017:27017
     environment:
-      - name=value
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root123
+    volumes:
+      - ./mongo_data:/data/db
     
