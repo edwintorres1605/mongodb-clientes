@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  mondodb:
+    image: mongo:5.0
+    ports:
+      - 27017:27017
+    environment:
+      - name=value
+    
